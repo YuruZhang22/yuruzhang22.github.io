@@ -14,3 +14,15 @@ author_profile: true
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
 {% endfor %}
+
+Journal Paper
+======
+Y. Zhang, Q. Liu, H. Wang, D. Chen, and K. Han, “CrowdSourcing Live High Definition Map via Collaborative Computation in Automotive Edge Computing”, IEEE Transactions on Vehicle Technology (TVT), Under Review
+
+
+
+Conferences
+======
+
+Posters
+======
