@@ -1,3 +1,4 @@
+---
 layout: archive
 title: "Academic Activities"
 permalink: /Academic Activities/
