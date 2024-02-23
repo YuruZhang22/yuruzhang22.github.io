@@ -20,7 +20,7 @@ Journal Paper
 
 Conferences
 ======
-6. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, “Learn to Augment Network Simulators Towards Digital Network Twins”, *IEEE International Conference on Communications* (**ICC**), 2024, Under Review, [arxiv](https://arxiv.org/abs/2311.12745)
+6. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, “Learn to Augment Network Simulators Towards Digital Network Twins”, *IEEE International Conference on Computer Communications* (**INFOCOM**) Workshops, 2024, [arxiv](https://arxiv.org/abs/2311.12745)
 
 5. M. Zhao, <u>Y. Zhang</u>, Q. Liu, “LiFi: Learn to Incentivize Federated Learning in Automotive Edge Computing”, *IEEE International Conference on Communications* (**ICC**), 2024, Under Review, [arxiv](https://arxiv.org/abs/2311.12720)
     
