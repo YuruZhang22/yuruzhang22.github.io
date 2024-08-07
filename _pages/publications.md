@@ -8,7 +8,7 @@ author_profile: true
 
 Journal Paper
 ======
-4. <u>Y. Zhang</u>, Q. Liu, H. Wang, D. Chen, and K. Han, “CrowdSourcing Live High Definition Map via Collaborative Computation in Automotive Edge Computing”, *IEEE Transactions on Vehicle Technology* (**TVT**), Under Review
+4. <u>Y. Zhang</u>, Q. Liu, H. Wang, D. Chen, and K. Han, “CrowdSourcing Live High Definition Map via Collaborative Computation in Automotive Edge Computing”, *IEEE Transactions on Vehicle Technology* (**TVT**), 2024
 
 3. <u>Y. Zhang</u>, C. Chen, L. Liu, D. Lan, H. Jiang and S. Wan, “Aerial Edge Computing on Orbit: A Task Offloading and Allocation Scheme”, *IEEE Transactions on Network Science and Engineering* (**TNSE**), Sep. 2022
 
