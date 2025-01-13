@@ -5,7 +5,13 @@ permalink: /Services/
 author_profile: true
 ---
 
-Reviewer, INFOCOM Next-generation Open and Programmable Radio Access Networks (NG-OPERA), 2023
+Reviewer, IEEE Transactions on Vehicular Technology (TVT), 2024
+
+Reviewer, IEEE Communications Magazine (COMMAG), 2024  
+
+Reviewer, Transactions on Mobile Computing (TMC), 2024
+
+Reviewer, INFOCOM Next-generation Open and Programmable Radio Access Networks (NG-OPERA), 2024, 2023
 
 Reviewer, Multimedia Tools and Applications (MTAP), 2023
 

@@ -20,6 +20,8 @@ Journal Paper
 
 Conferences
 ======
+7. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi,“AdaSlicing: Adaptive Online Network Slicing under Continual Network Dynamics in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2025
+
 6. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, “Learn to Augment Network Simulators Towards Digital Network Twins”, *IEEE International Conference on Computer Communications* (**INFOCOM**) Workshops, 2024, [arxiv](https://arxiv.org/abs/2311.12745)
 
 5. M. Zhao, <u>Y. Zhang</u>, Q. Liu, “LiFi: Learn to Incentivize Federated Learning in Automotive Edge Computing”, *IEEE International Conference on Communications* (**Globecom**), 2024, [arxiv](https://arxiv.org/abs/2311.12720)
