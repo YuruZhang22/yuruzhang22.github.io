@@ -1,5 +1,6 @@
 ---
 permalink: /
+layout: archive
 title: "Biography"
 excerpt: "About me"
 author_profile: true
