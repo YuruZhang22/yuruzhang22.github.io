@@ -25,5 +25,6 @@ Experience
 * Graduate Research Assistant in University of Nebraska-Lincoln, Aug. 2023-Present
   * Research on digital twin in wireless communication. Proposed a new approach to build digital network twin by augmenting existing network simulators. Designed new deep learning methods to bridge simulation-to-reality discrepancy between simulators and reality.
   * Research on AI/ML-driven resource management in wireless network. Built an end-to-end 5G network testbed with Ettus USRP B210, OpenAirInterface 5G RAN and Open5GS Core. Designed Bayesian learning based algorithm to automate resource allocation in network slicing. Designed robust training approach to improve the robustness of AI/ML policies via adversarial attacking on state space and defense re-training.
-
+* Graduate Teaching Assistant in University of Nebraska-Lincoln, Jan. 2024-May 2024
+  * CSCE 464/864 Internet Systems and Programming
 
