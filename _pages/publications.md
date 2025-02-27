@@ -20,7 +20,9 @@ Journal Paper
 
 Conferences
 ======
-7. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi,“AdaSlicing: Adaptive Online Network Slicing under Continual Network Dynamics in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2025
+8. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “InSlicing: Interpretable Learning-Assisted Network Slice Configuration in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**) Workshops, 2025, [arxiv](https://arxiv.org/abs/2502.15918)
+
+7. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “AdaSlicing: Adaptive Online Network Slicing under Continual Network Dynamics in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2025
 
 6. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, “Learn to Augment Network Simulators Towards Digital Network Twins”, *IEEE International Conference on Computer Communications* (**INFOCOM**) Workshops, 2024, [arxiv](https://arxiv.org/abs/2311.12745)
 
