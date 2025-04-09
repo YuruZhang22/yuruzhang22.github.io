@@ -5,7 +5,7 @@ permalink: /Honors and Awards/
 author_profile: true
 ---
 
-
+* Milton E. Mohr Fellowship, University of Nebraska-Lincoln, 2025-26
 
 * Student Travel Grant Award, ACM/IEEE SEC 2023, NSF, 2023
 
