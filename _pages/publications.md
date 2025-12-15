@@ -20,6 +20,10 @@ Journal Paper
 
 Conferences
 ======
+10. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, "oneTwin: Online Digital Network Twin via Neural Radio Radiance Field”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2026, Accepted
+
+9. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “inRAN: Interpretable Online Bayesian Learning for Network Automation in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2026, Accepted
+
 8. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “InSlicing: Interpretable Learning-Assisted Network Slice Configuration in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**) Workshops, 2025, [arxiv](https://arxiv.org/abs/2502.15918)
 
 7. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “AdaSlicing: Adaptive Online Network Slicing under Continual Network Dynamics in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2025
