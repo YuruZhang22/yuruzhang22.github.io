@@ -5,6 +5,7 @@ permalink: /Services/
 author_profile: true
 ---
 
+* Reviewer, IEEE Wireless Communications Magazine (WCM), 2026
 * Reviewer, IEEE Internet of Things Journal (IoT), 2025
 * Reviewer, IEEE Transactions on Vehicular Technology (TVT), 2024
 * Reviewer, IEEE Communications Magazine (COMMAG), 2024  
