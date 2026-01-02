@@ -17,7 +17,7 @@ Currently, I hold the position of Graduated Research Assistant at the [Intellige
 Education
 ======
 * Ph.D. student in Computer Science, University of Nebraska–Lincoln, Aug. 2022 -- Present
-* M.S. in Traffic Information Engineering and Control, Xidian University, Sept. 2019 -- June 2022
+* M.E. in Traffic Information Engineering and Control, Xidian University, Sept. 2019 -- June 2022
 * B.E. in Communication Engineering, Lanzhou Jiaotong University, Lanzhou, China, Sept. 2015 -- June 2019
 
 Experience
