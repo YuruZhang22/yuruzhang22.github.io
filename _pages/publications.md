@@ -16,6 +16,7 @@ Journal Paper
 
 Conferences
 ======
+12. <u>Y. Zhang</u>, M. Zhao, Q. Liu, A. Alkhateeb, AK. Agrawal, Q. Qu, "RadTwin: Generalizable Wireless Digital Twin for Dynamic Environments”, *IEEE International Conference on Computer Communications and Networks* (**ICCCN**), 2026, Accepted
 11. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, "oneTwin: Online Digital Network Twin via Neural Radio Radiance Field”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2026, Accepted
 10. M. Zhao, <u>Y. Zhang</u>, Q. Liu, A. Kak, N. Choi, “inRAN: Interpretable Online Bayesian Learning for Network Automation in Open Radio Access Networks”, *IEEE International Conference on Computer Communications* (**INFOCOM**), 2026, Accepted
 9. X. Li, <u>Y. Zhang</u>, Q. Liu, “Automatic Network Planning with Digital Radio Twin”, *IEEE International Conference on Communications* (**ICC**), May. 2026}
