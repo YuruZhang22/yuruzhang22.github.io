@@ -5,6 +5,7 @@ permalink: /Services/
 author_profile: true
 ---
 
+* Reviewer, IEEE Transactions on Green Communications and Networking (TGCN), 2026
 * Reviewer, IEEE Wireless Communications Magazine (WCM), 2026
 * Reviewer, IEEE Internet of Things Journal (IoT), 2025
 * Reviewer, IEEE Transactions on Vehicular Technology (TVT), 2024
