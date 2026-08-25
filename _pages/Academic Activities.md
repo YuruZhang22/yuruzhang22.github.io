@@ -6,6 +6,7 @@ author_profile: true
 ---
 
 
+* Paper Presentation at the IEEE ICCCN, Honolulu, Hawaii, USA, July 27-30, 2026
 * Participate in The Eighth ACM/IEEE Symposium on Edge Computing (SEC), Wilmington, DE, USA, Dec 6-9, 2023
 * Participate in Workshop on Enhanced Open Networked Airborne Computing Platform, University of Texas at Arlington, Dallas, USA, Oct 27, 2023
 * Participate in 2023 Agriculture and Rural Communities (ARA) Public Launch, Iowa State University, Ames, USA, Sep 6-8, 2023

@@ -5,6 +5,7 @@ permalink: /Honors and Awards/
 author_profile: true
 ---
 
+* Best Paper Award, IEEE ICCCN, 2026
 * Dean’s Fellowship Fellowship, University of Nebraska-Lincoln, 2026-27
 * Milton E. Mohr Fellowship, University of Nebraska-Lincoln, 2025-26
 * Student Travel Grant Award, ACM/IEEE SEC 2023, NSF, 2023
