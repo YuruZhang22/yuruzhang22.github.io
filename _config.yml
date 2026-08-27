@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Yuru Zhang"
   avatar           : "yuruzhang.png"
-  bio              : # "University of Nebraska-Lincoln"
-  location         : "Lincoln, NE, USA"
+  bio              : "Ph.D. Candidate"
+  location         :
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=omELe68AAAAJ&hl=en"

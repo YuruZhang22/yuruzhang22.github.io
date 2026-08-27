@@ -144,6 +144,16 @@
   }
 }
 
+// Two classes, to outrank the `.sidebar p { font-size: ... }` rule above.
+.sidebar .author__bio {
+  @include breakpoint($large) {
+    margin-bottom: 18px;
+    color: $gray;
+    font-size: 0.875em;
+    line-height: 1.4;
+  }
+}
+
 .author__urls-wrapper {
   position: relative;
   display: table-cell;
@@ -195,6 +205,10 @@
     background: transparent;
     box-shadow: none;
     text-align: center;
+
+    // Hairline above the link list, separating it from the name block.
+    padding-top: 16px;
+    border-top: 1px solid $border-color;
   }
 
   &:before {
@@ -233,17 +247,6 @@
 
   li {
     white-space: nowrap;
-  }
-
-  // Location / employer lead the list; a hairline rule separates them
-  // from the links that follow.
-  > li:first-child {
-    @include breakpoint($large) {
-      margin-bottom: 14px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid $border-color;
-      color: $gray;
-    }
   }
 
   a {
