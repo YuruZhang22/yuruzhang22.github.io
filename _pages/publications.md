@@ -14,10 +14,8 @@ Journal Paper
 1. C. Chen, <u>Y. Zhang</u>, M. R. Khosravi, Q. Pei and S. Wan, “An Intelligent Platooning Algorithm for Sustainable Transportation Systems in Smart Cities”, *IEEE Sensors Journal* , vol. 21, no. 14, pp. 15437-15447, Aug. 2020
 
 
-## Conferences
-
-**======**
-
+Conferences
+======
 12. <u>Y. Zhang</u>, M. Zhao, Q. Liu, A. Alkhateeb, AK. Agrawal, Q. Qu, “*RadTwin*: Generalizable Wireless Digital Twin for Dynamic Environments”, *IEEE International Conference on Computer Communications and Networks* (**ICCCN**), Honolulu, Hawaii, Jul. 2026, **Best Paper Award**
 
 13. <u>Y. Zhang</u>, M. Zhao, Q. Liu, N. Choi, “*oneTwin*: Online Digital Network Twin via Neural Radio Radiance Field”, *IEEE International Conference on Computer Communications* (**INFOCOM**), Tokyo, Japan, May 2026
