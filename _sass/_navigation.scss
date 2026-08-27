@@ -204,13 +204,22 @@
   .visible-links {
     display: table;
 
+    // Shrink-to-fit table, so auto margins centre the whole bar. Only from
+    // $large up: below that the dropdown button is absolutely positioned at
+    // the right, and a centred bar can slide underneath it.
+    @include breakpoint($large) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     li {
       display: table-cell;
       vertical-align: middle;
 
+      // No `font-weight: bold` here: it used to pick out the site title,
+      // which is no longer the first item -- it would just bold whichever
+      // nav link happens to come first.
       &:first-child {
-        font-weight: bold;
-
         a {
           margin-left: 0;
         }
