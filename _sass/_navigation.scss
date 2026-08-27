@@ -177,6 +177,16 @@
   min-width: 250px;
   background: $background-color;
 
+  // Line the bar up with the body text below it: the sidebar's 2 columns
+  // plus the 0.5-column prefix the content column carries. Padding on the
+  // nav rather than a margin on .visible-links, because the greedy-nav
+  // script sizes the bar against `$nav.width()` -- jQuery reports the
+  // content width, so the offset comes out of availableSpace and the
+  // collapse threshold stays honest.
+  @include breakpoint($large) {
+    @include prefix(2.5 of 12);
+  }
+
   a {
     display: block;
     margin: 0 1rem;
@@ -203,14 +213,6 @@
 
   .visible-links {
     display: table;
-
-    // Shrink-to-fit table, so auto margins centre the whole bar. Only from
-    // $large up: below that the dropdown button is absolutely positioned at
-    // the right, and a centred bar can slide underneath it.
-    @include breakpoint($large) {
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     li {
       display: table-cell;
