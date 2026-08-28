@@ -1,8 +1,10 @@
 ---
 layout: archive
 title: "Honors and Awards"
-permalink: /Honors and Awards/
+permalink: /honors/
 author_profile: true
+redirect_from:
+  - /Honors and Awards/
 ---
 
 * Best Paper Award, IEEE ICCCN, 2026
