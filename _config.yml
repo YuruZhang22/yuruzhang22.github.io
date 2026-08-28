@@ -41,20 +41,11 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - .asset-cache
   - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - node_modules
-  - package.json
-  - vendor
 keep_files:
   - .git
 encoding: "utf-8"
@@ -88,14 +79,10 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: archive
+      layout: default
       author_profile: true
 
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
@@ -113,9 +100,3 @@ whitelist:
   - jekyll-redirect-from
 
 
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

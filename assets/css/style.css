@@ -1,0 +1,204 @@
+/* ==========================================================================
+   yuruzhang22.github.io
+   Values carry over from the AcademicPages build this replaced, read off the
+   rendered pages rather than the old Sass, so the design is unchanged.
+   ========================================================================== */
+
+:root {
+  --text:          #494e52;
+  --muted:         #7a8288;
+  --heading:       #313436;
+  --rule:          #f2f3f3;
+  --link:          #52adc8;
+  --linkedin:      #007bb6;
+  --github:        #171516;
+  --link-hover:    #3e8296;
+  --nav:           #7a8288;
+  --nav-hover:     #5c6266;
+  --nav-underline: #bcc0c3;
+
+  /* The content column starts at 15.2542% + 5.9322% = 21.1864%. The masthead
+     uses the same two tracks, which is what lines the nav up with the text. */
+  --side: 15.2542%;
+  --gap:   5.9322%;
+  --wrap:  925px;
+}
+
+@media (min-width: 80em) { :root { --wrap: 1280px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; background: #fff; }
+@media (min-width: 48em) { html { font-size: 18px; } }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@keyframes intro { from { opacity: 0; } to { opacity: 1; } }
+
+/* Masthead ================================================================= */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  animation: intro .3s both .15s;
+}
+
+.masthead__inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.masthead ul {
+  display: flex;
+  flex-wrap: wrap;   /* narrow screens wrap instead of hiding items */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.masthead a {
+  position: relative;
+  display: block;
+  margin: 0 1rem;
+  padding: .5rem 0;
+  color: var(--nav);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.masthead li:first-child a { margin-left: 0; }
+.masthead li:last-child  a { margin-right: 0; }
+
+.masthead a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--nav-underline);
+  transform: scaleX(0);
+  transition: transform .2s ease-in-out;
+}
+
+.masthead a:hover { color: var(--nav-hover); }
+.masthead a:hover::after { transform: scaleX(1); }
+
+/* Page ==================================================================== */
+
+.page {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 2em 1em 4em;
+  animation: intro .3s both .35s;
+}
+
+@media (min-width: 57.8125em) {
+  .masthead__inner,
+  .page {
+    display: grid;
+    grid-template-columns: var(--side) 1fr;
+    column-gap: var(--gap);
+    align-items: start;
+  }
+  .masthead nav { grid-column: 2; }
+}
+
+/* Profile ================================================================= */
+
+.profile { margin-bottom: 2.5em; text-align: center; }
+
+@media (min-width: 57.8125em) {
+  .profile { position: sticky; top: 2em; margin-bottom: 0; }
+}
+
+.profile__avatar {
+  display: block;      /* inline would add a baseline gap under the image */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  padding: 5px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+}
+
+.profile__name {
+  margin: 18px 0 16px;
+  color: var(--heading);
+  font-size: 1.563em;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.015em;
+}
+
+.profile__bio {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: .875em;
+  line-height: 1.4;
+}
+
+.profile__links {
+  margin: 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+}
+
+.profile__links li { margin-bottom: .5em; font-size: .75rem; }
+
+.profile__links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  padding: 5px 0;
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 1em;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+.profile__links a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* Brand marks keep their own colour, as they did before. */
+.profile__links .i-linkedin { color: var(--linkedin); }
+.profile__links .i-github   { color: var(--github); }
+.profile__links a:hover svg { color: inherit; }
+
+/* fa-fw sat every glyph in a 1.25em box; the aspect ratio keeps each one
+   centred in that box rather than stretched to fill it. */
+.profile__links svg { flex: none; width: 1.25em; height: 1em; }
+
+/* Content ================================================================= */
+
+.content h1 { margin: 0 0 .5em; font-size: 1.563em; font-weight: 700; line-height: 1.2; }
+
+/* Two classes, so this outranks the `.content h1` line-height above. */
+.content .content__title { line-height: 1; }
+.content h2 { margin: 2em 0 .5em; font-size: 1.25em;  font-weight: 700; line-height: 1.2; }
+.content h3 { margin: 2em 0 .5em; font-size: 1em;     font-weight: 700; line-height: 1.2; }
+
+.content p  { margin: 1em 0 1.3em; }
+.content ul,
+.content ol { margin: 1em 0; padding-left: 40px; }
+.content li { margin-bottom: .5em; }
+.content li > ul,
+.content li > ol { margin: .5em 0 0; }
+
+.content a         { color: var(--link); text-decoration: underline; }
+.content a:hover   { color: var(--link-hover); }
+.content img       { max-width: 100%; height: auto; }
+
+/* Wide content should scroll inside itself, never the page. */
+.content pre,
+.content table { display: block; max-width: 100%; overflow-x: auto; }

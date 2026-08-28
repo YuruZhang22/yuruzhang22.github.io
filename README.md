@@ -2,25 +2,32 @@
 
 Personal academic homepage of Yuru Zhang — <https://yuruzhang22.github.io/>
 
-Built with Jekyll on [AcademicPages](https://github.com/academicpages/academicpages.github.io),
-a fork of the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme
-(© 2016 Michael Rose, MIT — see `LICENSE`). The theme has been trimmed down to just
-what this site uses.
+A hand-written Jekyll site: one layout, one stylesheet, no JavaScript, no theme.
+It began life on [AcademicPages](https://github.com/academicpages/academicpages.github.io)
+(a fork of Minimal Mistakes, MIT — see `LICENSE`) and was rewritten to the same
+design once it was clear the theme was carrying ~13,000 lines of Sass and 131KB
+of jQuery to render five static pages.
 
-## Editing content
+## Layout of the repo
 
 | What | Where |
 |------|-------|
 | Biography, education, experience | `_pages/about.md` (the homepage, `permalink: /`) |
 | Publications | `_pages/publications.md` |
-| Honors and awards | `_pages/Honors and Awards.md` |
-| Academic activities | `_pages/Academic Activities.md` |
-| Services | `_pages/services.md` |
+| Honors, activities, services | `_pages/honors.md`, `activities.md`, `services.md` |
 | Nav bar | `_data/navigation.yml` |
 | Name, photo, sidebar links | `author:` block in `_config.yml` |
-| Styles | `_sass/` (compiled from `assets/css/main.scss`) |
+| Page skeleton, `<head>`, sidebar, nav | `_layouts/default.html` |
+| Every style on the site | `assets/css/style.css` |
 
-Publication lists use a kramdown block IAL so they number newest-first:
+Adding a page means dropping a Markdown file in `_pages/` with a `permalink`;
+the layout applies by default.
+
+## Two things worth knowing before editing
+
+**Publication numbering.** Kramdown renumbers ordered lists from 1 and ignores
+the digits you type, so the descending numbers come from an attribute list that
+sets `reversed` and `start` on the `<ol>`:
 
 ```markdown
 {: reversed="reversed" start="12"}
@@ -28,18 +35,21 @@ Publication lists use a kramdown block IAL so they number newest-first:
 11. ...
 ```
 
-Kramdown renumbers ordered lists from 1 and ignores the digits you type, so
-`reversed` + `start` on the `<ol>` is what actually produces the descending
-numbers. Bump `start` when you add an entry.
+Bump `start` when you add an entry. The blank line above the `{: ... }` matters —
+without it kramdown attaches the attributes to the preceding heading instead.
+
+**The content column.** The sidebar is `15.2542%` and the gap is `5.9322%`, so
+text starts at `21.1864%`. The masthead uses the same two grid tracks, which is
+what lines the nav up with the body text. Change one, change both.
 
 ## Publishing
 
-Push to `master`. GitHub Pages builds the site automatically and it goes live
-within a minute or two.
+Push to `master`. GitHub Pages builds the site and it goes live in a minute or
+two. `style.css` is plain CSS, copied as-is — there is no Sass step.
 
 ## Running locally
 
-Needs `ruby-dev` for Jekyll's native extensions:
+Jekyll needs `ruby-dev` for its native extensions:
 
 ```bash
 sudo apt install ruby-dev bundler

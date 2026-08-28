@@ -1,8 +1,6 @@
 ---
-layout: archive
 title: "Academic Activities"
 permalink: /activities/
-author_profile: true
 redirect_from:
   - /Academic Activities/
 ---

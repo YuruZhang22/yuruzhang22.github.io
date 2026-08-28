@@ -1,8 +1,6 @@
 ---
-layout: archive
 title: "Services"
 permalink: /Services/
-author_profile: true
 ---
 
 * Reviewer, IEEE Transactions on Green Communications and Networking (TGCN), 2026
