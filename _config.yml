@@ -7,9 +7,6 @@ description              : "Personal homepage of Yuru Zhang, Ph.D. candidate in 
 url                      : https://yuruzhang22.github.io # no trailing slash: base_path appends to it
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "YuruZhang22/yuruzhang22.github.io"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 
 
 # Structured data: _includes/seo.html turns this into a schema.org Person
@@ -91,7 +88,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: single
+      layout: archive
       author_profile: true
 
 
