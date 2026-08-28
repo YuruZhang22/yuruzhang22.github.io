@@ -10,7 +10,7 @@ redirect_from:
 
 I am a fifth-year Ph.D student and currently pursuing the degree in the [School of Computing](https://computing.unl.edu/) at the [University of Nebraska-Lincoln](https://www.unl.edu/). My major is Computer Science and my research interests include Wireless Communication, Digital Twin, Machine Learning, Edge Computing.
 
-Currently, I hold the position of Graduated Research Assistant at the [Intelligent Network sysTem (INT) Laboratory](https://liuqiang12040913.github.io/project.html) under the guidance of [Dr. Qiang Liu](https://liuqiang12040913.github.io/index.html). I received the M.E. degree in transportation information engineering and control from [Xidian University](https://en.xidian.edu.cn/), Xi'an, China, in 2022, and received the Outstanding Graduate Student Award.
+Currently, I hold the position of Graduated Research Assistant at the [Intelligent Network sysTem (INT) Laboratory](https://liuqiang12040913.github.io/projects/) under the guidance of [Dr. Qiang Liu](https://liuqiang12040913.github.io/). I received the M.E. degree in transportation information engineering and control from [Xidian University](https://en.xidian.edu.cn/), Xi'an, China, in 2022, and received the Outstanding Graduate Student Award.
 
 
 Education
