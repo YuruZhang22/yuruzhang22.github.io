@@ -4,7 +4,7 @@ title                    : "Yuru Zhang / Ph.D. Candidate"
 title_separator          : "-"
 name                     : "Yuru Zhang" # used in the footer copyright line
 description              : "Personal homepage of Yuru Zhang, Ph.D. candidate in Computer Science at the University of Nebraska-Lincoln, working on wireless networks, digital twins and edge computing."
-url                      : https://yuruzhang22.github.io/
+url                      : https://yuruzhang22.github.io # no trailing slash: base_path appends to it
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "YuruZhang22/yuruzhang22.github.io"
 breadcrumbs              : false # true, false (default)
