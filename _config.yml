@@ -12,6 +12,18 @@ words_per_minute         : 160
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 
 
+# Structured data: _includes/seo.html turns this into a schema.org Person
+# blob for search engines. It previously rendered "name": "Your Name" with a
+# null sameAs, which was worse than emitting nothing.
+social:
+  type                   : Person
+  name                   : "Yuru Zhang"
+  links:
+    - "https://scholar.google.com/citations?user=omELe68AAAAJ&hl=en"
+    - "https://www.linkedin.com/in/yuruzhang22/"
+    - "https://github.com/YuruZhang22"
+
+
 # Site Author
 # The sidebar renders whichever of these is filled in. _includes/author-profile.html
 # supports many more (orcid, researchgate, twitter, ...) -- add the key here to show one.
