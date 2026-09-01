@@ -28,11 +28,12 @@
 
   --side:  175px;   /* photograph column */
   --gap:   3rem;
-  /* One measure for everything: prose, bullets and bibliography share a
-     right edge. 38rem at 17px in these serifs is ~72 characters. */
-  --measure: 38rem;
-  --wrap: 54rem;    /* 175px margin + 3rem gutter + 38rem of text + padding */
+  --wrap: 58rem;
 }
+
+/* Wide measure by request: on large screens the text column runs the full
+   width of the container rather than being held to a typographic measure. */
+@media (min-width: 80em) { :root { --wrap: 75rem; } }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -109,7 +110,7 @@ body {
 
 /* Colophon ================================================================ */
 
-.profile { margin-bottom: 3rem; }
+.profile { margin-bottom: 3rem; text-align: center; }
 
 @media (min-width: 52em) {
   .profile { position: sticky; top: 2.5rem; margin-bottom: 0; }
@@ -149,6 +150,7 @@ body {
 .profile__links a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .5rem;
   color: var(--muted);
   font-size: .9375rem;
@@ -161,8 +163,6 @@ body {
 .profile__links svg { flex: none; width: 1.05em; height: 1em; }
 
 /* Content ================================================================= */
-
-.content { max-width: var(--measure); }
 
 .content__title {
   margin: 0 0 2rem;

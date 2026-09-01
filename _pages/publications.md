@@ -4,16 +4,6 @@ permalink: /publications/
 ---
 
 
-Journal Paper
-======
-
-{: reversed="reversed" start="4"}
-4. <u>Y. Zhang</u>, Q. Liu, H. Wang, D. Chen, and K. Han, “CrowdSourcing Live High Definition Map via Collaborative Computation in Automotive Edge Computing”, *IEEE Transactions on Vehicle Technology* (**TVT**), 2024
-3. <u>Y. Zhang</u>, C. Chen, L. Liu, D. Lan, H. Jiang and S. Wan, “Aerial Edge Computing on Orbit: A Task Offloading and Allocation Scheme”, *IEEE Transactions on Network Science and Engineering* (**TNSE**), Sep. 2022
-2. C. Chen, <u>Y. Zhang</u>, Z. Wang, S. Wan and Q. Pei, “Distributed computation offloading method based on deep reinforcement learning in ICV”, *Elsevier Applied Soft Computing* (**ASC**), vol. 103,  pp. 107108, May 2021
-1. C. Chen, <u>Y. Zhang</u>, M. R. Khosravi, Q. Pei and S. Wan, “An Intelligent Platooning Algorithm for Sustainable Transportation Systems in Smart Cities”, *IEEE Sensors Journal* , vol. 21, no. 14, pp. 15437-15447, Aug. 2020
-
-
 Conferences
 ======
 
@@ -42,6 +32,15 @@ Conferences
 
 1. Q. Liu, <u>Y. Zhang</u>, H. Wang, “EdgeMap: CrowdSourcing High Definition Map in Automotive Edge Computing”, *IEEE International Conference on Communications* (**ICC**), Seoul, South Korea, May 2022
 
+
+Journal Paper
+======
+
+{: reversed="reversed" start="4"}
+4. <u>Y. Zhang</u>, Q. Liu, H. Wang, D. Chen, and K. Han, “CrowdSourcing Live High Definition Map via Collaborative Computation in Automotive Edge Computing”, *IEEE Transactions on Vehicle Technology* (**TVT**), 2024
+3. <u>Y. Zhang</u>, C. Chen, L. Liu, D. Lan, H. Jiang and S. Wan, “Aerial Edge Computing on Orbit: A Task Offloading and Allocation Scheme”, *IEEE Transactions on Network Science and Engineering* (**TNSE**), Sep. 2022
+2. C. Chen, <u>Y. Zhang</u>, Z. Wang, S. Wan and Q. Pei, “Distributed computation offloading method based on deep reinforcement learning in ICV”, *Elsevier Applied Soft Computing* (**ASC**), vol. 103,  pp. 107108, May 2021
+1. C. Chen, <u>Y. Zhang</u>, M. R. Khosravi, Q. Pei and S. Wan, “An Intelligent Platooning Algorithm for Sustainable Transportation Systems in Smart Cities”, *IEEE Sensors Journal* , vol. 21, no. 14, pp. 15437-15447, Aug. 2020
 
 
 Posters
