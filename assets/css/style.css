@@ -1,106 +1,100 @@
 /* ==========================================================================
-   yuruzhang22.github.io
-   Values carry over from the AcademicPages build this replaced, read off the
-   rendered pages rather than the old Sass, so the design is unchanged.
+   yuruzhang22.github.io — "Offprint"
+
+   Set as a journal offprint: one serif, one column of text at a readable
+   measure, a narrow margin holding the photograph, and a bibliography with
+   hanging numerals. No ornament, no colour beyond links.
+
+   Two things here are load-bearing and easy to break:
+
+   1. The publication lists carry real `reversed` and `start="12"` attributes
+      from kramdown, so the numerals MUST come from native list markers.
+      A CSS counter would silently renumber all seventeen entries 1..n.
+   2. `.content > p` uses the child combinator on purpose. The loose
+      conference list wraps every entry in its own <p>; a descendant
+      selector would cap those at the prose measure and wreck the list.
    ========================================================================== */
 
 :root {
-  --text:          #494e52;
-  --muted:         #7a8288;
-  --heading:       #313436;
-  --rule:          #f2f3f3;
-  --link:          #52adc8;
-  --linkedin:      #007bb6;
-  --github:        #171516;
-  --link-hover:    #3e8296;
-  --nav:           #7a8288;
-  --nav-hover:     #5c6266;
-  --nav-underline: #bcc0c3;
+  /* Contrast on white, measured: ink 14.9:1, muted 4.8:1, link 6.8:1 */
+  --ink:        #23282d;
+  --muted:      #6b7280;
+  --rule:       #e3e6e9;
+  --link:       #1c5d99;
+  --link-hover: #12406b;
 
-  /* The content column starts at 15.2542% + 5.9322% = 21.1864%. The masthead
-     uses the same two tracks, which is what lines the nav up with the text. */
-  --side: 15.2542%;
-  --gap:   5.9322%;
-  --wrap:  925px;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text",
+           Constantia, Cambria, Georgia, "Liberation Serif", "Times New Roman", serif;
+
+  --side:  175px;   /* photograph column */
+  --gap:   3rem;
+  /* One measure for everything: prose, bullets and bibliography share a
+     right edge. 38rem at 17px in these serifs is ~72 characters. */
+  --measure: 38rem;
+  --wrap: 54rem;    /* 175px margin + 3rem gutter + 38rem of text + padding */
 }
-
-@media (min-width: 80em) { :root { --wrap: 1280px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { font-size: 16px; background: #fff; }
-@media (min-width: 48em) { html { font-size: 18px; } }
+/* No root font-size override — the reader's browser preference is theirs.
+   Everything below is rem, so it scales with whatever they have set. */
+html { font-size: 100%; background: #fff; -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  font-family: var(--serif);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
 }
 
-@keyframes intro { from { opacity: 0; } to { opacity: 1; } }
+@media (min-width: 48em) { body { font-size: 1.0625rem; } }
 
 /* Masthead ================================================================= */
 
-.masthead {
-  border-bottom: 1px solid var(--rule);
-  animation: intro .3s both .15s;
-}
+.masthead { border-bottom: 1px solid var(--rule); }
 
 .masthead__inner {
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 1em;
+  padding: 1.25rem 1rem;
 }
 
 .masthead ul {
   display: flex;
-  flex-wrap: wrap;   /* narrow screens wrap instead of hiding items */
+  flex-wrap: wrap;          /* narrow screens wrap; nothing is ever hidden */
+  gap: 0 1.75rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .masthead a {
-  position: relative;
   display: block;
-  margin: 0 1rem;
-  padding: .5rem 0;
-  color: var(--nav);
+  padding: .25rem 0;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: .9375rem;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.masthead li:first-child a { margin-left: 0; }
-.masthead li:last-child  a { margin-right: 0; }
+.masthead a:hover { color: var(--ink); border-bottom-color: var(--rule); }
 
-.masthead a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--nav-underline);
-  transform: scaleX(0);
-  transition: transform .2s ease-in-out;
-}
-
-.masthead a:hover { color: var(--nav-hover); }
-.masthead a:hover::after { transform: scaleX(1); }
+/* The page you are on, marked by ink and a rule rather than by weight —
+   the serif stack has no 600, and synthesised semibold looks smeared. */
+.masthead a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
 
 /* Page ==================================================================== */
 
 .page {
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 2em 1em 4em;
-  animation: intro .3s both .35s;
+  padding: 2.5rem 1rem 5rem;
 }
 
-@media (min-width: 57.8125em) {
+@media (min-width: 52em) {
   .masthead__inner,
   .page {
     display: grid;
@@ -108,97 +102,171 @@ body {
     column-gap: var(--gap);
     align-items: start;
   }
+  /* Nav sits in the text column, so it starts on the same vertical as the
+     first word of every page. */
   .masthead nav { grid-column: 2; }
 }
 
-/* Profile ================================================================= */
+/* Colophon ================================================================ */
 
-.profile { margin-bottom: 2.5em; text-align: center; }
+.profile { margin-bottom: 3rem; }
 
-@media (min-width: 57.8125em) {
-  .profile { position: sticky; top: 2em; margin-bottom: 0; }
+@media (min-width: 52em) {
+  .profile { position: sticky; top: 2.5rem; margin-bottom: 0; }
 }
 
 .profile__avatar {
-  display: block;      /* inline would add a baseline gap under the image */
-  margin: 0 auto;
+  display: block;           /* inline would leave a baseline gap beneath */
   width: 100%;
-  max-width: 175px;
+  max-width: var(--side);
   height: auto;
-  padding: 5px;
-  border: 1px solid var(--rule);
   border-radius: 50%;
 }
 
 .profile__name {
-  margin: 18px 0 16px;
-  color: var(--heading);
-  font-size: 1.563em;
+  margin: 1.125rem 0 .125rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -.015em;
+  line-height: 1.25;
 }
 
 .profile__bio {
-  margin: 0 0 18px;
+  margin: 0 0 1.125rem;
   color: var(--muted);
-  font-size: .875em;
+  font-size: .9375rem;
   line-height: 1.4;
 }
 
 .profile__links {
   margin: 0;
-  padding: 16px 0 0;
+  padding: 1rem 0 0;
   border-top: 1px solid var(--rule);
   list-style: none;
 }
 
-.profile__links li { margin-bottom: .5em; font-size: .75rem; }
+.profile__links li { margin-bottom: .3rem; }
 
 .profile__links a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: .5em;
-  padding: 5px 0;
-  border-radius: 4px;
-  color: var(--text);
-  font-size: 1em;
+  gap: .5rem;
+  color: var(--muted);
+  font-size: .9375rem;
   text-decoration: none;
-  transition: color .15s ease-in-out;
 }
 
 .profile__links a:hover { color: var(--link-hover); text-decoration: underline; }
 
-/* Brand marks keep their own colour, as they did before. */
-.profile__links .i-linkedin { color: var(--linkedin); }
-.profile__links .i-github   { color: var(--github); }
-.profile__links a:hover svg { color: inherit; }
-
-/* fa-fw sat every glyph in a 1.25em box; the aspect ratio keeps each one
-   centred in that box rather than stretched to fill it. */
-.profile__links svg { flex: none; width: 1.25em; height: 1em; }
+/* Every glyph in a fixed box so the four labels start on one vertical. */
+.profile__links svg { flex: none; width: 1.05em; height: 1em; }
 
 /* Content ================================================================= */
 
-.content h1 { margin: 0 0 .5em; font-size: 1.563em; font-weight: 700; line-height: 1.2; }
+.content { max-width: var(--measure); }
 
-/* Two classes, so this outranks the `.content h1` line-height above. */
-.content .content__title { line-height: 1; }
-.content h2 { margin: 2em 0 .5em; font-size: 1.25em;  font-weight: 700; line-height: 1.2; }
-.content h3 { margin: 2em 0 .5em; font-size: 1em;     font-weight: 700; line-height: 1.2; }
+.content__title {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
 
-.content p  { margin: 1em 0 1.3em; }
-.content ul,
-.content ol { margin: 1em 0; padding-left: 40px; }
-.content li { margin-bottom: .5em; }
-.content li > ul,
-.content li > ol { margin: .5em 0 0; }
+/* Section heads — Education, Experience, Conferences — are labels, not
+   titles. Set small and letterspaced above a rule, they divide the page
+   without competing with the entries underneath. */
+.content h1:not(.content__title) {
+  margin: 2.75rem 0 1.125rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
 
-.content a         { color: var(--link); text-decoration: underline; }
-.content a:hover   { color: var(--link-hover); }
-.content img       { max-width: 100%; height: auto; }
+.content > h1:not(.content__title):first-child { margin-top: 0; padding-top: 0; border-top: 0; }
 
-/* Wide content should scroll inside itself, never the page. */
-.content pre,
-.content table { display: block; max-width: 100%; overflow-x: auto; }
+.content h2 { margin: 2rem 0 .75rem; font-size: 1.125rem; font-weight: 700; line-height: 1.3; }
+.content h3 { margin: 1.75rem 0 .5rem; font-size: 1rem;   font-weight: 700; line-height: 1.3; }
+
+.content > p { margin: 0 0 1.15rem; }
+
+/* Lists =================================================================== */
+
+.content ul { margin: 0 0 1.15rem; padding-left: 1.25rem; }
+.content ul > li { margin-bottom: .35rem; }
+
+.content li > ul { margin: .45rem 0 .9rem; padding-left: 1.25rem; }
+.content li > ul > li { margin-bottom: .35rem; }
+
+/* Bibliography ============================================================
+   Native decimal markers, hanging indent from list-style-position: outside.
+   Do not replace these with counters — see the header note. */
+
+.content ol {
+  margin: 0 0 1.15rem;
+  padding-left: 2.4rem;
+  list-style: decimal;
+}
+
+.content ol > li {
+  margin-bottom: 1rem;
+  line-height: 1.65;        /* a shade more than prose: these entries run
+                               three and four lines and need to hold together */
+}
+
+.content ol > li::marker {
+  color: var(--muted);
+  font-size: .9em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The loose conference list wraps each entry in a paragraph; the tight
+   journal list does not. Flatten both so they set identically. */
+.content li > p { margin: 0; max-width: none; }
+
+/* Her own name in an author string. Underline is a typewriter convention
+   that has no place in a set bibliography — weight says the same thing
+   more quietly and does not collide with the links. */
+.content u { font-weight: 700; text-decoration: none; }
+
+/* Venue acronyms and the award. Deliberately plain: no colour, no
+   monospace, no small caps — none of which any reference list in this
+   field uses, and synthesised small caps look broken in these serifs. */
+.content strong { font-weight: 700; }
+
+.content em { font-style: italic; }
+
+/* Links =================================================================== */
+
+.content a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: #b9cbdd;
+  text-underline-offset: .13em;
+  text-decoration-thickness: .06em;
+}
+
+.content a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
+
+.content img { max-width: 100%; height: auto; }
+
+/* Wide content scrolls inside itself, never the page. */
+.content pre, .content table { display: block; max-width: 100%; overflow-x: auto; }
+
+/* Print ===================================================================
+   Academic pages get printed. Drop the navigation, unstick the colophon,
+   and let links show as plain ink. */
+
+@media print {
+  .masthead { display: none; }
+  .page { display: block; max-width: none; padding: 0; }
+  .profile { position: static; margin-bottom: 1.5rem; }
+  .profile__avatar { max-width: 120px; }
+  .content { max-width: none; }
+  .content a { color: inherit; text-decoration: none; }
+  .content h1:not(.content__title) { break-after: avoid; }
+  .content li { break-inside: avoid; }
+}
