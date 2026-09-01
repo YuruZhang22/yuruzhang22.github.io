@@ -26,7 +26,8 @@
   --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text",
            Constantia, Cambria, Georgia, "Liberation Serif", "Times New Roman", serif;
 
-  --side:  175px;   /* photograph column */
+  --side:  205px;   /* wide enough for the full e-mail address */
+  --photo: 175px;
   --gap:   3rem;
   --wrap: 58rem;
 }
@@ -119,7 +120,7 @@ body {
 .profile__avatar {
   display: block;           /* inline would leave a baseline gap beneath */
   width: 100%;
-  max-width: var(--side);
+  max-width: var(--photo);
   height: auto;
   border-radius: 50%;
 }
@@ -153,7 +154,7 @@ body {
   justify-content: center;
   gap: .5rem;
   color: var(--muted);
-  font-size: .9375rem;
+  font-size: .875rem;   /* the e-mail address is the longest label here */
   text-decoration: none;
 }
 
